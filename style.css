@@ -1,5 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Turret+Road:wght@200;300;400;500;700;800&display=swap");
+
 :root {
   --border-radius: 10px;
+}
+
+a:hover {
+  color: hsl(0, 0%, 44%);
+}
+
+h1,
+a,
+h2 {
+  color: white;
+  font-family: Poppins;
+  transition: all 0.35s;
+}
+
+h1,
+h2 {
+  font-size: 22px;
+}
+
+.title {
+  text-align: center;
+  padding: 0 20px;
+}
+
+p {
+  font-size: 16px;
+  text-align: justify;
+  word-spacing: 2px;
+  text-transform: capitalize;
+  padding: 10px 0;
+}
+
+@media screen and (min-width: 600px) {
+  p {
+    font-size: 14px;
+  }
+  h1,
+  h2 {
+    font-size: 30px;
+  }
 }
 
 @property --angle {
@@ -21,6 +63,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Open Sans;
 }
 
 body {
@@ -29,7 +72,8 @@ body {
 
 main {
   color: hsl(0, 0%, 44%);
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,8 +81,12 @@ main {
   gap: 40px;
 }
 
+.ada-image {
+  width: 40%;
+}
+
 .card {
-  max-width: 320px;
+  max-width: 600px;
   padding: 2em;
   background-color: #1c1f2b;
   text-align: center;
@@ -47,7 +95,8 @@ main {
 }
 
 .animated-border::after,
-.animated-border::before {
+.animated-border::before,
+.control-button:hover::after {
   content: "";
   position: absolute;
   height: 100%;
@@ -73,21 +122,22 @@ main {
   filter: blur(1.5rem);
   opacity: 0.5;
 }
-/* 
-.stand {
-  position: absolute;
-  left: 50%;
-  translate: -50%;
-  width: 100px;
-  height: 100px;
-  background-image: linear-gradient(to bottom, #1c1f2b, hsl(255, 20%, 10%));
-  border-radius: 100%;
-  z-index: 1;
-} */
 
 .control-button {
   border: 0;
   padding: 10px 30px;
   border-radius: var(--border-radius);
   transition: all 0.5s;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.control-button:hover {
+  scale: 0.9;
+}
+.control-button:active {
+  scale: 1.1;
 }
