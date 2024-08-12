@@ -11,7 +11,7 @@ const story = [
   `<h1>The Story of Ada and the Unbreakable Code
 </h1> 
 <img
-          src="./ada-illustration.webp"
+          src="ada-illustration.webp"
           alt="ada-illustration"
           class="ada-image"
         />
