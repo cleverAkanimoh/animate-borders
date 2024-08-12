@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: hsl(255, 20%, 10%);
+  color: hsl(0, 0%, 44%);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  max-width: 320px;
+  padding: 2em;
+  background-color: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+}
